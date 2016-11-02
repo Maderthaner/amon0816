@@ -79,12 +79,15 @@ moments_buff = collections.deque(maxlen=history_len_long)
 hitxprojhist_buff = collections.deque(maxlen=history_len)
 hitxprojjitter_buff = collections.deque(maxlen=history_len)
 hitxprojseeded_buff = collections.deque(maxlen=history_len)
-minitof_volts_buffer = collections.deque(maxlen=history_len)
+delayhist2d_buff = collections.deque(maxlen=history_len)
+minitof_volts_buff = collections.deque(maxlen=history_len)
+
 
 # Histograms
-hithist = Histogram((100,0.,1024.))
-hitjitter = Histogram((100,0.,1024.))
-hitseeded = Histogram((100,0.,1024.))
+hithist = Histogram((100,0.,1023.))
+hitjitter = Histogram((100,0.,1023.))
+hitseeded = Histogram((100,0.,1023.))
+delayhist2d = Histogram((100,0.,1023.),(20,-100.,100.))
 
 # ion yield array for SXRSS scan
 ion_yield = np.zeros(102) ##choose appropriate range
@@ -103,6 +106,12 @@ ds = DataSource('shmem=psana.0:stop=no')
 ###### --- Offline analysis
 #ds = DataSource("exp=AMO/amon0816:run=53:smd")
 
+offline = 'shmem' not in ds.env().jobName()
+
+if not offline:
+    calibDir = '/reg/d/psdm/amo/amon0816/calib'
+    setOption('psana.calib-dir', calibDir)
+
 XTCAVRetrieval = ShotToShotCharacterization();
 XTCAVRetrieval.SetEnv(ds.env())
 opal_det = Detector('OPAL1')
@@ -111,15 +120,10 @@ minitof_det = Detector('ACQ1')
 minitof_channel = 0
 ebeam_det = Detector('EBeam')
 
-offline = 'shmem' not in ds.env().jobName()
-
 for nevt,evt in enumerate(ds.events()):
 
         if offline:
             if nevt%size!=rank: continue
-        else:
-            calibDir = '/reg/d/psdm/amo/amon0816/calib'
-            setOption('psana.calib-dir', calibDir)
             
         ##############################  READING IN DETECTORS #############################
         ### Opal Detector
@@ -198,6 +202,7 @@ for nevt,evt in enumerate(ds.events()):
         hithist.reset()
         hitjitter.reset()
         hitseeded.reset()
+        delayhist2d.reset()
         for hit in c:
             hithist.fill(float(hit[0]+shift))
             hitjitter.fill(float(hit[0]))
@@ -233,25 +238,32 @@ for nevt,evt in enumerate(ds.events()):
         ###############################################################################
 
         ######################### XTCAV ANALYSIS #####################################
-        if not XTCAVRetrieval.SetCurrentEvent(evt): continue
-        time,power,ok = XTCAVRetrieval.XRayPower()
-        if not ok: continue
-        agreement,ok=XTCAVRetrieval.ReconstructionAgreement()
-        if not ok: continue
-        times_p0 = np.asarray(time[0])
-        power_p0 = np.asarray(power[0])
-        times_p1 = np.asarray(time[1])
-        power_p1 = np.asarray(power[1])
+        if XTCAVRetrieval.SetCurrentEvent(evt):
+            time,power,ok = XTCAVRetrieval.XRayPower()
+            print ok
+            if ok:
+                agreement,ok=XTCAVRetrieval.ReconstructionAgreement()
+                print ok
+                if ok:
+                    times_p0 = np.asarray(time[0])
+                    power_p0 = np.asarray(power[0])
+                    times_p1 = np.asarray(time[1])
+                    power_p1 = np.asarray(power[1])
 
-        mean_t_p0 = np.sum(times_p0*power_p0/np.sum(power_p0))
-        var_t_p0 = np.sum(times_p0**2*power_p0/np.sum(power_p0))
-        rms_p0 = np.sqrt(var_t_p0 - mean_times_p0**2)
+                    mean_t_p0 = np.sum(times_p0*power_p0/np.sum(power_p0))
+                    var_t_p0 = np.sum(times_p0**2*power_p0/np.sum(power_p0))
+                    rms_p0 = np.sqrt(var_t_p0 - mean_times_p0**2)
 
-        mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
-        var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
-        rms_p1 = np.sqrt(var_t_p1 - mean_times_p1**2)
+                    mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
+                    var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
+                    rms_p1 = np.sqrt(var_t_p1 - mean_times_p1**2)
+                    
+                    pulse_separation = mean_t_p0 - mean_t_p1
+                    print pulse_separation
+                    
+                    for hit in c:
+                        delayhist2d.fill(hit[0],pulse_separation/len(c))
 
-        pulse_separation = mean_t_p0 - mean_t_p1
 
         ###############################################################################
         ############################### FOR PARALLELIZATION ###########################
@@ -270,13 +282,16 @@ for nevt,evt in enumerate(ds.events()):
         hitxprojseeded_buff.append(hitseeded.values)
         hitxprojseeded_sum = sum(hitxprojseeded_buff)
 
+        delayhist2d_buff.append(delayhist2d.values)
+        delayhist2d_sum = sum(delayhist2d_buff)
+
         # x-projection history
         #xproj_int_buff.append(integrated_projx)
         #xproj_int_sum = np.array([sum(xproj_int_buff)])#/len(xproj_int_buff)
 
         # TOF average
-        minitof_volts_buffer.append(minitof_volts_thresh)
-        minitof_volts_buffer_sum = sum(minitof_volts_buffer)
+        minitof_volts_buff.append(minitof_volts_thresh)
+        minitof_volts_sum = sum(minitof_volts_buff)
 
 
 
@@ -325,8 +340,12 @@ for nevt,evt in enumerate(ds.events()):
             comm.Reduce(hitxprojjitter_sum,hitxprojjitter_sum_all)
 
             if not 'minitof_volts_sum_all' in locals():
-                minitof_volts_sum_all = np.empty_like(minitof_volts_buffer_sum)
-            comm.Reduce(minitof_volts_buffer_sum,minitof_volts_sum_all)
+                minitof_volts_sum_all = np.empty_like(minitof_volts_sum)
+            comm.Reduce(minitof_volts_sum,minitof_volts_sum_all)
+
+            if not 'delayhist2d_sum_all' in locals():
+                delayhist2d_sum_all = np.empty_like(delayhist2d_sum)
+            comm.Reduce(delayhist2d_sum,delayhist2d_sum_all)
 
             if not 'ion_yield_sum_all' in locals():
                 ion_yield_sum_all = np.empty_like(ion_yield)
@@ -407,6 +426,10 @@ for nevt,evt in enumerate(ds.events()):
                 # #
                 opal_plot_avg = Image(evtGood, "Opal Average", opal_sum_all) # make a 2D plot
                 publish.send("OPALAVG", opal_plot_avg) # send to the display
+
+                # delayhist2d_sum_all
+                delayhist2d_plot = Image(evtGood, "Histogram avg", delayhist2d_sum_all) # make a 2D plot
+                publish.send("DELAYHIST", delayhist2d_plot) # send to the display
                 
                 # Exquisit plotting, acqiris
                 wf_plot = XYPlot(evtGood, "MINI TOF - single traces", minitof_times,minitof_volts,formats=".-") # make a 1D plot
