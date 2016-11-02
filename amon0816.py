@@ -17,7 +17,8 @@ import random
 from skbeam.core.accumulators.histogram import Histogram
 
 # LCLS psana to read data
-from psana import * 
+from psana import *
+from xtcav.ShotToShotCharacterization import *
 
 # For online plotting
 from psmon import publish
@@ -102,6 +103,8 @@ ds = DataSource('shmem=psana.0:stop=no')
 ###### --- Offline analysis
 #ds = DataSource("exp=AMO/amon0816:run=53:smd")
 
+XTCAVRetrieval = ShotToShotCharacterization();
+XTCAVRetrieval.SetEnv(ds.env())
 opal_det = Detector('OPAL1')
 #opal4_det = Detector('OPAL4')
 minitof_det = Detector('ACQ1')
@@ -114,6 +117,9 @@ for nevt,evt in enumerate(ds.events()):
 
         if offline:
             if nevt%size!=rank: continue
+        else:
+            calibDir = '/reg/d/psdm/amo/amon0816/calib'
+            setOption('psana.calib-dir', calibDir)
             
         ##############################  READING IN DETECTORS #############################
         ### Opal Detector
@@ -214,7 +220,7 @@ for nevt,evt in enumerate(ds.events()):
                 hitseeded.fill(float(hit[0]))        
 
         minitof_volts_thresh = minitof_volts
-        minitof_volts_thresh[minitof_volts_thresh > -0.12] = 0
+        minitof_volts_thresh[minitof_volts_thresh > -0.01] = 0
 
         #print 'number of hits:',len(c)
         #find_blobs.draw_blobs(opal,c,w) # draw the blobs in the opal picture
@@ -225,7 +231,27 @@ for nevt,evt in enumerate(ds.events()):
 #                ion_yield[index] = ion_yield[index] + wf_yield
 
         ###############################################################################
-   
+
+        ######################### XTCAV ANALYSIS #####################################
+        if not XTCAVRetrieval.SetCurrentEvent(evt): continue
+        time,power,ok = XTCAVRetrieval.XRayPower()
+        if not ok: continue
+        agreement,ok=XTCAVRetrieval.ReconstructionAgreement()
+        if not ok: continue
+        times_p0 = np.asarray(time[0])
+        power_p0 = np.asarray(power[0])
+        times_p1 = np.asarray(time[1])
+        power_p1 = np.asarray(power[1])
+
+        mean_t_p0 = np.sum(times_p0*power_p0/np.sum(power_p0))
+        var_t_p0 = np.sum(times_p0**2*power_p0/np.sum(power_p0))
+        rms_p0 = np.sqrt(var_t_p0 - mean_times_p0**2)
+
+        mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
+        var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
+        rms_p1 = np.sqrt(var_t_p1 - mean_times_p1**2)
+
+        pulse_separation = mean_t_p0 - mean_t_p1
 
         ###############################################################################
         ############################### FOR PARALLELIZATION ###########################
