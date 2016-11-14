@@ -81,6 +81,7 @@ hitxprojjitter_buff = collections.deque(maxlen=history_len)
 hitxprojseeded_buff = collections.deque(maxlen=history_len)
 delayhist2d_buff = collections.deque(maxlen=history_len)
 minitof_volts_buff = collections.deque(maxlen=history_len)
+hitrate_roi_buff = collections.deque(maxlen=history_len_long)
 
 
 # Histograms
@@ -93,9 +94,9 @@ delayhist2d = Histogram((100,0.,1023.),(20,-100.,100.))
 ion_yield = np.zeros(102) ##choose appropriate range
 
 # For perspective transformation and warp
-pts1 = np.float32([[229,273],[706,200],[265,822],[763,812]])
-xLength = 520
-yLength = 600
+pts1 = np.float32([[96,248],[935,193],[96,762],[935,785]])
+xLength = 839
+yLength = 591
 pts2 = np.float32([[0,0],[xLength,0],[0,yLength],[xLength,yLength]])
 M = cv2.getPerspectiveTransform(pts1,pts2)
 
@@ -104,7 +105,7 @@ print "DONE"
 ###### --- Online analysis
 ds = DataSource('shmem=psana.0:stop=no')
 ###### --- Offline analysis
-#ds = DataSource("exp=AMO/amon0816:run=53:smd")
+#ds = DataSource("exp=AMO/amon0816:run=156:smd:dir=/reg/d/ffb/amo/amon0816/xtc:live")#"exp=AMO/amon0816:run=165:smd"
 
 offline = 'shmem' not in ds.env().jobName()
 
@@ -119,6 +120,7 @@ opal_det = Detector('OPAL1')
 minitof_det = Detector('ACQ1')
 minitof_channel = 0
 ebeam_det = Detector('EBeam')
+eorbits_det = Detector('EOrbits')
 
 for nevt,evt in enumerate(ds.events()):
 
@@ -138,10 +140,13 @@ for nevt,evt in enumerate(ds.events()):
 
         ### Ebeam
         #ebeam = ebeam_det.get(evt)
+
+        ### Eorbits
+        eorbits = eorbits_det.get(evt)
         
         # Check all detectors are read in
         eventCounter += 1
-        if opal_raw is None or minitof_volts_raw is None or minitof_times_raw is None:
+        if opal_raw is None or minitof_volts_raw is None or minitof_times_raw is None or eorbits is None:
             evtBad += 1
             print "Bad event"
             continue
@@ -204,8 +209,9 @@ for nevt,evt in enumerate(ds.events()):
         hitseeded.reset()
         delayhist2d.reset()
         for hit in c:
-            hithist.fill(float(hit[0]+shift))
-            hitjitter.fill(float(hit[0]))
+            hithist.fill(float(hit[1]+shift))
+            hitjitter.fill(float(hit[1]))
+                
 
         ###############################################################################
 
@@ -240,29 +246,29 @@ for nevt,evt in enumerate(ds.events()):
         ######################### XTCAV ANALYSIS #####################################
         if XTCAVRetrieval.SetCurrentEvent(evt):
             time,power,ok = XTCAVRetrieval.XRayPower()
-            print ok
+            #print ok
             if ok:
                 agreement,ok=XTCAVRetrieval.ReconstructionAgreement()
-                print ok
-                if ok:
+                #print ok
+                if ok and agreement > 0.5:
                     times_p0 = np.asarray(time[0])
                     power_p0 = np.asarray(power[0])
-                    times_p1 = np.asarray(time[1])
-                    power_p1 = np.asarray(power[1])
+                    #times_p1 = np.asarray(time[1])
+                    #power_p1 = np.asarray(power[1])
 
                     mean_t_p0 = np.sum(times_p0*power_p0/np.sum(power_p0))
                     var_t_p0 = np.sum(times_p0**2*power_p0/np.sum(power_p0))
-                    rms_p0 = np.sqrt(var_t_p0 - mean_times_p0**2)
+                    rms_p0 = np.sqrt(var_t_p0 - mean_t_p0**2)
 
-                    mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
-                    var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
-                    rms_p1 = np.sqrt(var_t_p1 - mean_times_p1**2)
+                    #mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
+                    #var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
+                    #rms_p1 = np.sqrt(var_t_p1 - mean_times_p1**2)
                     
-                    pulse_separation = mean_t_p0 - mean_t_p1
-                    print pulse_separation
+                    pulse_separation = mean_t_p0#- mean_t_p1
+                    #print pulse_separation
                     
-                    for hit in c:
-                        delayhist2d.fill(hit[0],pulse_separation/len(c))
+                    #for hit in c:
+                    #    delayhist2d.fill(hit[1],[pulse_separation])
 
 
         ###############################################################################
@@ -364,12 +370,14 @@ for nevt,evt in enumerate(ds.events()):
 
                 ###### History on master
                 print eventCounter*size, 'total events processed.'
-                opal_hit_avg_buff.append(opal_hit_sum_all[0]/(len(opal_hit_buff)*size))
+                opal_hit_avg_buff.append(float(opal_hit_sum_all[0])/float(len(opal_hit_buff)*size))
                 #xproj_int_avg_buff.append(xproj_int_sum_all[0]/(len(xproj_int_buff)*size))
                 #moments_avg_buff.append(moments_sum_all[0]/(len(moments_buff)*size))
                 ### moments history
                 moments_buff.append(s)
                 #moments_sum = np.array([sum(moments_buff)])#/len(moments_buff)
+                opal_pers_xproj = np.sum(opal_perspective,axis=0)
+                hitrate_roi_buff.append(np.sum(hitxprojhist_sum_all[40:60])/(len(hitxprojhist_buff)*size))
                 
                 #####################################################################################################
                 
@@ -387,6 +395,12 @@ for nevt,evt in enumerate(ds.events()):
                 # print 'publish',opal_hit_avg_arr
                 publish.send("HITRATE", hitrate_avg_plot) # send to the display
                 # #
+                axroihit = range(0,len(hitrate_roi_buff))
+                hitrate_avg_plot2 = XYPlot(evtGood, "Hitrate history ROI", axroihit, np.array(list(hitrate_roi_buff)),formats=".-") # make a 1D plot
+                # print 'publish',opal_hit_avg_arr
+                publish.send("ROIHITRATE", hitrate_avg_plot2) # send to the display
+
+
                 #xproj_int_avg_arr = np.array(list(xproj_int_avg_buff))
                 #ax3 = range(0,len(xproj_int_avg_arr))
                 #xproj_int_plot = XYPlot(evtGood, "XProjection running avg history", ax3, xproj_int_avg_arr) # make a 1D plot
@@ -422,6 +436,10 @@ for nevt,evt in enumerate(ds.events()):
                 # Perspective transformation avg
                 opal_plot3 = Image(evtGood, "Opal average perspective transformed",cv2.warpPerspective(opal_sum_all,M,(xLength,yLength)) ) # make a 2D plot
                 publish.send("OPALAVGPERS", opal_plot3) # send to the display
+
+                # Perspective x-projection opal_pers_xproj
+                opal_pers_xproj_plot = XYPlot(evtGood, "Opal perspective X-Projection", np.arange(len(opal_pers_xproj)),opal_pers_xproj,formats=".-") # make a 1D plot
+                publish.send("OPALPERSXPROJ",opal_pers_xproj_plot) # send to the display
 
                 # #
                 opal_plot_avg = Image(evtGood, "Opal Average", opal_sum_all) # make a 2D plot
@@ -468,3 +486,13 @@ for nevt,evt in enumerate(ds.events()):
                 axseedavg = range(0,hitxprojseeded_sum_all.shape[0])
                 hitseeded_plot_avg = XYPlot(evtGood, "Only Seeded Average", axja, hitxprojseeded_sum_all/(len(hitxprojseeded_buff)*size),formats=".-") # make a 1D plot
                 publish.send("HITSEEDAVG", hitseeded_plot_avg) # send to the display
+                
+                # Eorbits X
+                ax_eorbitsX = range(0,len(eorbits.fBPM_X()))
+                eorbits_plotX = XYPlot(evtGood,"EOrbits X",ax_eorbitsX,eorbits.fBPM_X())
+                publish.send("EORBITSX", eorbits_plotX) # send to the display
+
+                # Eorbits X
+                ax_eorbitsY = range(0,len(eorbits.fBPM_Y()))
+                eorbits_plotY = XYPlot(evtGood,"EOrbits Y",ax_eorbitsY,eorbits.fBPM_Y())
+                publish.send("EORBITSY", eorbits_plotY) # send to the display

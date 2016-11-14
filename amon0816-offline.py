@@ -1,31 +1,22 @@
 ##### Useful commands
-#
+# source /reg/g/psdm/etc/ana_env.sh
 # mpirun -n 40 --host daq-amo-mon02,daq-amo-mon03,daq-amo-mon04,daq-amo-mon05,daq-amo-mon06 amon0816.sh
 #
-#
+# bsub -n 288 -q psnehhiprioq -o /reg/data/ana13/amo/amon0816/results/mbucher/%J.log mpirun python /reg/neh/operator/amoopr/2016/amon0816/amon0816-offline.py
 #
 #
 #
 
 # Standard PYTHON modules
-print "IMPORTING STANDARD PYTHON MODULES...",
 import cv2
 import numpy as np
-#import math
-#import collections
-#import random
 from skbeam.core.accumulators.histogram import Histogram
 
 # LCLS psana to read data
 from psana import *
 from xtcav.ShotToShotCharacterization import *
 
-# For online plotting
-#from psmon import publish
-#from psmon.plots import XYPlot,Image
-
-# custom algorithms
-#from pypsalg import find_blobs
+# Custom stuff
 import find_blobs
 
 # parallelization
@@ -34,102 +25,86 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 
-# custom functions
-#def moments(arr):
-#    if np.count_nonzero(arr) == 0:
-#        return 0,0
-#    nbins = len(arr)
-#    bins  = range(nbins)
-#    mean  = np.average(bins,weights=arr)
-#    var   = np.average((bins-mean)**2,weights=arr)
-#    sdev  = np.sqrt(var)
-#    return mean,sdev
-
-#def FWHM(arr):  #  ****************** IN PROGRESS *************************
-#    if np.count_nonzero(arr) == 0:
-#        return 0,0
-#    nbins = len(arr)
-#    bins  = range(nbins)
-#    mean  = np.average(bins,weights=arr)
-#    var   = np.average((bins-mean)**2,weights=arr)
-#    sdev  = np.sqrt(var)
-#    return mean,sdev
-
-#if rank==0:
-#    publish.init()
-
+# parameter parsing
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("runs", help="psana run numer",type=int,nargs='+')
+args = parser.parse_args()
 
 # Set up event counters
 eventCounter = 0
 evtGood = 0
 evtBad = 0
-#evtUsed = 0
 
-# Buffers for histories
-#history_len = 6
-#history_len_long = 100
-#opal_hit_buff = collections.deque(maxlen=history_len)
-#opal_hit_avg_buff = collections.deque(maxlen=history_len_long)
-#opal_circ_buff = collections.deque(maxlen=history_len)
-#xproj_int_buff = collections.deque(maxlen=history_len)
-#xproj_int_avg_buff = collections.deque(maxlen=history_len)
-#moments_buff = collections.deque(maxlen=history_len_long)
-#moments_avg_buff = collections.deque(maxlen=history_len_long)
-#xhistogram_buff = collections.deque(maxlen=history_len)
-#hitxprojhist_buff = collections.deque(maxlen=history_len)
-#hitxprojjitter_buff = collections.deque(maxlen=history_len)
-#hitxprojseeded_buff = collections.deque(maxlen=history_len)
-#delayhist2d_buff = collections.deque(maxlen=history_len)
-#minitof_volts_buff = collections.deque(maxlen=history_len)
+##################################################################
+########################### Histograms & stuff ###################
+##################################################################
 
+runs =np.array([args.runs],dtype='int').flatten()
 
-
-# Histograms & stuff
-runs =np.array([53,54])
-
-xLength = 520
-yLength = 600
+xLength = 839 # rotated camera 798
+yLength = 591 # rotated camera 647
+photonE = 508. # 1050. for runs 134 - ~150 |||| 508. for 156, 157 |||| 530 for 158+
+cutoff = 0.2   # gas detector cutoff
+xtcav = True
 
 binsOfHist = xLength * len(runs)
-#hithist = Histogram((100,0.,1023.))
-#hitjitter = Histogram((100,0.,1023.))
-#hitseeded = Histogram((100,0.,1023.))
+
 spectraCombined = Histogram((binsOfHist,0.,float(binsOfHist)))
 
-delayhist2d = Histogram((binsOfHist,0.,float(binsOfHist)),(40,-200.,200.))
-elosshist2d = Histogram((binsOfHist,0.,float(binsOfHist)),(100, 3000.,4000.))
+delayhist2d = Histogram((50,0.,50.),(binsOfHist,0.,float(binsOfHist)))
+delayCountHist = Histogram((50,0.,50.))
 
-# ion yield array for SXRSS scan
-#ion_yield = np.zeros(102) ##choose appropriate range
+feegashist2d = Histogram((100, 0.,2.0),(binsOfHist,0.,float(binsOfHist)))
+feeCountHist = Histogram((100,0.,2.0))
 
-# For perspective transformation and warp
-pts1 = np.float32([[229,273],[706,200],[265,822],[763,812]])
+photonhist2d = Histogram((200, photonE*(1.-0.02),photonE*(1.+0.02)),(binsOfHist,0.,float(binsOfHist)))
+photonCountHist = Histogram((200,photonE*(1.-0.02),photonE*(1.+0.02)))
+
+RatiosXTCAV = Histogram((50, -5., 5.),(binsOfHist,0.,float(binsOfHist)))
+TotalPowXTCAV = Histogram((100, 600., 1200.),(binsOfHist,0.,float(binsOfHist)))
+RatiosiTOF = Histogram((50, -5., 5.),(binsOfHist,0.,float(binsOfHist)))
+TotalPowiTOF = Histogram((20, -20., 0.),(binsOfHist,0.,float(binsOfHist)))
+RelYieldsXTCAV = Histogram((60, 200., 800.),(60, 200., 800.))
+RelYieldsiTOF = Histogram((100, -10., 0.),(100, -10., 0.))
+Correlation_iTOF_XTCAV_ratio = Histogram((50, -5., 5.),(50, -5., 5.))
+Correlation_iTOF_XTCAV_pow = Histogram((20, -20., 0.),(100, 600., 1200.))
+
+NormRuns = Histogram((len(runs),0.,float(len(runs))-.99))
+#################################################################
+
+
+### For perspective transformation and warp
+#pts1 = np.float32([[229,273],[706,200],[265,822],[763,812]])
+#pts1 = np.float32([[29,73],[906,00],[65,1022],[963,1012]])
+#pts1 = np.float32([[53,301],[888,158],[136,821],[934,806]]) #rotated set
+pts1 = np.float32([[91,248],[930,193],[91,762],[930,785]])
 pts2 = np.float32([[0,0],[xLength,0],[0,yLength],[xLength,yLength]])
 M = cv2.getPerspectiveTransform(pts1,pts2)
 
-print "DONE"
+
+####################################################################
+############################# STARTING ANALYSIS #####################
+####################################################################
+
+if rank == 0: print "Starting analysis on ", size," cores."
 
 
 for run in runs:
 
-    ###### --- Online analysis
-    #ds = DataSource('shmem=psana.0:stop=no')
     ###### --- Offline analysis
-    ds = DataSource("exp=AMO/amon0816:run=%s:smd" % run)#idx -> for all file  smd -> for small data
-
-    #offline = 'shmem' not in ds.env().jobName()
-
-    #if not offline:
-    #    calibDir = '/reg/d/psdm/amo/amon0816/calib'
-    #    setOption('psana.calib-dir', calibDir)
+    ds = DataSource("exp=AMO/amon0816:run=%s:smd:dir=/reg/d/ffb/amo/amon0816/xtc:live" % run)
+    #ds = DataSource("exp=AMO/amon0816:run=%s:smd" % run)
 
     XTCAVRetrieval = ShotToShotCharacterization();
     XTCAVRetrieval.SetEnv(ds.env())
     opal_det = Detector('OPAL1')
     #opal4_det = Detector('OPAL4')
-    #minitof_det = Detector('ACQ1')
-    #minitof_channel = 0
+    minitof_det = Detector('ACQ1')
+    minitof_channel = 0
     ebeam_det = Detector('EBeam')
+    feegas_det = Detector('FEEGasDetEnergy')
+    eorbits_det = Detector('EOrbits')
 
     for nevt,evt in enumerate(ds.events()):
             if nevt%size!=rank: continue
@@ -141,50 +116,50 @@ for run in runs:
 
 
             ### TOF
-            #minitof_volts_raw = minitof_det.waveform(evt)
-            #minitof_times_raw = minitof_det.wftime(evt)
+            minitof_volts_raw = minitof_det.waveform(evt)
+            minitof_times_raw = minitof_det.wftime(evt)
 
 
             ### Ebeam
             ebeam = ebeam_det.get(evt)
 
+            # fee gas energy
+            feegas = feegas_det.get(evt)
+
+            # eorbits
+            eorbits = eorbits_det.get(evt)
+
             # Check all detectors are read in
             eventCounter += 1
-            if opal_raw is None or ebeam is None:
+            if opal_raw is None or ebeam is None or feegas is None or eorbits is None:
                 evtBad += 1
                 print "Bad event"
                 continue
             else:
                 evtGood += 1
+            
+            #if evtGood > 5000: break
 
             opal = opal_raw.copy()
             #opal_screen = opal4_raw.copy()
-            #minitof_volts = minitof_volts_raw[minitof_channel]
-            #minitof_times = minitof_times_raw[minitof_channel]
+            minitof_volts = minitof_volts_raw[minitof_channel]
+            minitof_times = minitof_times_raw[minitof_channel]
 
             ##############################################################################
+
 
             ################################## Runs numbers ##############################
             n = int(np.where(runs==run)[0])
             ###############################################################################
 
+
             ################################## OPAL ANALYSIS #############################
-            # threshold the image
-            #threshold = 500
-            #opal_thresh = (opal>threshold)*opal
 
             # Perform Perspective Transformation
             opal_pers = cv2.warpPerspective(opal,M,(xLength,yLength))
-
+            #opal_pers = opal #NOTE: pers trans deactivated!!!!
             # threshold perspective
             threshold = 500
-            #opal_pers_thresh = (opal_pers>threshold)*opal_pers
-
-            # do two projections
-            #opal_thresh_xproj = np.sum(opal_thresh,axis=0)
-
-            # sum up the projected image in bin range 100 to 200
-            #integrated_projx = np.sum(opal_thresh_xproj[100:200])
 
             # do blob finding
             # find blobs takes two variables. an Opal image (first) and then a threshold value (second)
@@ -218,10 +193,10 @@ for run in runs:
             #hitjitter.reset()
             #hitseeded.reset()
             #delayhist2d.reset()
-            for hit in c:
+            #for hit in c:
                 #hithist.fill(float(hit[0]+shift))
                 #hitjitter.fill(float(hit[0]))
-                spectraCombined.fill(float(hit[1]+xLength*n))
+                #spectraCombined.fill(float(hit[1]+xLength*n))
 
             ###############################################################################
 
@@ -229,7 +204,11 @@ for run in runs:
             ############################ MINI TOF ANALYSIS ################################
 
             # find yield of waveform over certain interval
-            #wf_yield = np.sum(minitof_volts[1:401]-minitof_volts[5300:5700]) #choose proper window later  
+            Thres_baseline = -0.05
+            iTOF_yield_Ne = np.sum(minitof_volts[4020:4185]) #choose proper window later 
+            iTOF_yield_CO = np.sum(minitof_volts[4770:4925]) #choose proper window later 
+
+ 
             # get maximum value of x-ray beam
             #max_hithist = np.amax(hithist.data,axis=0) # might have to change this to x2.data?
             #max_hithist = np.amax(opal_thresh_xproj,axis=0) # might have to change this to x2.data?
@@ -253,171 +232,174 @@ for run in runs:
 
             ###############################################################################
 
+
             ######################### XTCAV ANALYSIS #####################################
             pulse_separation = -666
-            if XTCAVRetrieval.SetCurrentEvent(evt):
-                time,power,ok = XTCAVRetrieval.XRayPower()
-                print ok
-                if ok:
-                    agreement,ok=XTCAVRetrieval.ReconstructionAgreement()
-                    print ok
+            iyieldXTCAV = False
+            if xtcav:
+                if XTCAVRetrieval.SetCurrentEvent(evt):
+                    time,power,ok = XTCAVRetrieval.XRayPower()
+                    #print ok
                     if ok:
-                        times_p0 = np.asarray(time[0])
-                        power_p0 = np.asarray(power[0])
-                        times_p1 = np.asarray(time[1])
-                        power_p1 = np.asarray(power[1])
+                        agreement,ok=XTCAVRetrieval.ReconstructionAgreement()
+                        #print ok
+                        if ok and agreement > 0.5:
+                            times_p0 = np.asarray(time[0])
+                            power_p0 = np.asarray(power[0])
+                            power_p0[power_p0<0]=0
+                            #times_p1 = np.asarray(time[1])
+                            #power_p1 = np.asarray(power[1])
+                            
+                            mean_t_p0 = np.sum(times_p0*power_p0/np.sum(power_p0))
+                            var_t_p0 = np.sum(times_p0**2*power_p0/np.sum(power_p0))
+                            rms_p0 = np.sqrt(var_t_p0 - mean_t_p0**2)
+                            pulse_separation = rms_p0
+                            
+                            #mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
+                            #var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
+                            #rms_p1 = np.sqrt(var_t_p1 - mean_t_p1**2)
 
-                        mean_t_p0 = np.sum(times_p0*power_p0/np.sum(power_p0))
-                        var_t_p0 = np.sum(times_p0**2*power_p0/np.sum(power_p0))
-                        rms_p0 = np.sqrt(var_t_p0 - mean_times_p0**2)
-
-                        mean_t_p1 = np.sum(times_p1*power_p1/np.sum(power_p1))
-                        var_t_p1 = np.sum(times_p1**2*power_p1/np.sum(power_p1))
-                        rms_p1 = np.sqrt(var_t_p1 - mean_times_p1**2)
-
-                        pulse_separation = mean_t_p0 - mean_t_p1
-                        #print pulse_separation
-
-                        #for hit in c:
-                        #    delayhist2d.fill(xval,pulse_separation)
+                            #pulse_separation = mean_t_p0 - mean_t_p1
+                            
+                            yieldXTCAV1 = np.sum(power_p0[0:140])
+                            yieldXTCAV2 = np.sum(power_p0[141:288])
+                            iyieldXTCAV = True
+                            #print 'Happy'
                         
 
 
-            #################################### eBeam ####################################
+            #################################### eBeam & FEE gas det#######################
             L3Energy = ebeam.ebeamL3Energy()
+            bla = L3Energy/13720.
+            photonEnergy = 8330. * bla**2
             
-            #for hit in c:
-            #elosshist2d.fill(np.array(spectra)+xLength*n,L3Energy)
+            fee_1 = (feegas.f_11_ENRC()+feegas.f_12_ENRC())/2.
+            fee_2 = (feegas.f_21_ENRC()+feegas.f_22_ENRC())/2.
+            #fee_6 = (feegas.f_64_ENRC()+feegas.f_63_ENRC())/2.  # New R&D gas dets likely not calibrated.
             
 
             ###############################################################################
+
+
 
             ################################ Populate histograms ##########################
+            if fee_2 > cutoff and iTOF_yield_CO <-2.:
+                for hit in c:
+                    count = [hit[1]+xLength*n]
+                    spectraCombined.fill(count)
+                    delayhist2d.fill([pulse_separation],count)
+                    feegashist2d.fill([fee_2],count)
+                    photonhist2d.fill([photonEnergy],count)
+                    TotalPowiTOF.fill([iTOF_yield_Ne+iTOF_yield_CO],count)
+                    RelYieldsiTOF.fill([iTOF_yield_Ne],[iTOF_yield_CO])
+                    if iTOF_yield_Ne > iTOF_yield_CO:
+                        RatiosiTOF.fill([iTOF_yield_Ne/iTOF_yield_CO],count)
+                    if iTOF_yield_Ne < iTOF_yield_CO:
+                        RatiosiTOF.fill([-iTOF_yield_CO/iTOF_yield_Ne],count)
+                            
+                    if iyieldXTCAV == True:
+                        TotalPowXTCAV.fill([yieldXTCAV1+yieldXTCAV2],count)
+                        RelYieldsXTCAV.fill([yieldXTCAV1],[yieldXTCAV2])
+                        Correlation_iTOF_XTCAV_pow.fill([iTOF_yield_Ne+iTOF_yield_CO],[yieldXTCAV1+yieldXTCAV2])
+                        Correlation_iTOF_XTCAV_ratio.fill([abs(yieldXTCAV1/yieldXTCAV2)],[abs(iTOF_yield_Ne/iTOF_yield_CO)])
+                        if yieldXTCAV1 > yieldXTCAV2:
+                            RatiosXTCAV.fill([yieldXTCAV1/yieldXTCAV2],count)
+                        if yieldXTCAV2 > yieldXTCAV1:
+                            RatiosXTCAV.fill([-yieldXTCAV2/yieldXTCAV1],count)
+                        
+            
+                    NormRuns.fill(n)
+                    delayCountHist.fill([pulse_separation])
+                    feeCountHist.fill([fee_2])
+                    photonCountHist.fill([photonEnergy])
 
-            for hit in c:
-                spectraCombined.fill([hit[1]+xLength*n])
-                delayhist2d.fill([hit[1]+xLength*n],[pulse_separation])
-                elosshist2d.fill([hit[1]+xLength*n],[L3Energy])
 
-            ###############################################################################
-            ############################### FOR PARALLELIZATION ###########################
-            ###############################################################################
-
-
-            ############################# Histories of certain values #####################
-            if rank==0 and evtGood%10:
+            ############################# sporadic updates #####################
+            if rank==0 and evtGood%10 == 0:
                 print eventCounter*size
-                
-            # x-projection histogram history
-            #hitxprojhist_buff.append(hithist.values)
-            #hitxprojhist_sum = sum(hitxprojhist_buff)
+   
 
-            #hitxprojjitter_buff.append(hitjitter.values)
-            #hitxprojjitter_sum = sum(hitxprojjitter_buff)
+############################################################################
+########################### Summing all up #################################
+############################################################################
 
-            #hitxprojseeded_buff.append(hitseeded.values)
-            #hitxprojseeded_sum = sum(hitxprojseeded_buff)
-
-            #delayhist2d_buff.append(delayhist2d.values)
-            #delayhist2d_sum = sum(delayhist2d_buff)
-
-            # x-projection history
-            #xproj_int_buff.append(integrated_projx)
-            #xproj_int_sum = np.array([sum(xproj_int_buff)])#/len(xproj_int_buff)
-
-            # TOF average
-            #minitof_volts_buff.append(minitof_volts_thresh)
-            #minitof_volts_sum = sum(minitof_volts_buff)
-
-
-
-            # Opal hitcounter history
-            #opal_hit_buff.append(len(c))
-            #opal_hit_sum = np.array([sum(opal_hit_buff)])#/len(opal_hit_buff)        
-
-            # Opal history
-            #opal_circ_buff.append(opal_thresh)
-            #opal_sum = sum(opal_circ_buff)
-
-
-            # only update the plots and call comm.Reduce "once in a while"
-            #if evtGood%5 == 0:
-                ### create empty arrays and dump for master
-                #if not 'moments_sum_all' in locals():
-                #    moments_sum_all = np.empty_like(moments_sum)
-                #comm.Reduce(moments_sum,moments_sum_all)
-
-if not 'spectraCombined_all' in locals():
-    spectraCombined_all = np.zeros_like(spectraCombined.values)
+spectraCombined_all = np.zeros_like(spectraCombined.values)
 comm.Reduce(spectraCombined.values,spectraCombined_all)
 
-if not 'delayhist2d_all' in locals():
-    delayhist2d_all = np.zeros_like(delayhist2d.values)
+delayhist2d_all = np.zeros_like(delayhist2d.values)
 comm.Reduce(delayhist2d.values,delayhist2d_all)
 
-if not 'elosshist2d_all' in locals():
-    elosshist2d_all = np.zeros_like(elosshist2d.values)
-comm.Reduce(elosshist2d.values,elosshist2d_all)
+feegashist2d_all = np.zeros_like(feegashist2d.values)
+comm.Reduce(feegashist2d.values,feegashist2d_all)
 
-if not 'evtGood_all' in locals():
-    evtGood_all = np.zeros_like([evtGood])
-comm.Reduce([evtGood],evtGood_all)
+photonhist2d_all = np.zeros_like(photonhist2d.values)
+comm.Reduce(photonhist2d.values,photonhist2d_all)
+
+RatiosXTCAV_all = np.zeros_like(RatiosXTCAV.values)
+comm.Reduce(RatiosXTCAV.values,RatiosXTCAV_all)
+
+TotalPowXTCAV_all = np.zeros_like(TotalPowXTCAV.values)
+comm.Reduce(TotalPowXTCAV.values,TotalPowXTCAV_all)
+
+RelYieldsXTCAV_all = np.zeros_like(RelYieldsXTCAV.values)
+comm.Reduce(RelYieldsXTCAV.values,RelYieldsXTCAV_all)
+
+RatiosiTOF_all = np.zeros_like(RatiosiTOF.values)
+comm.Reduce(RatiosiTOF.values,RatiosiTOF_all)
+
+TotalPowiTOF_all = np.zeros_like(TotalPowiTOF.values)
+comm.Reduce(TotalPowiTOF.values,TotalPowiTOF_all)
+
+RelYieldsiTOF_all = np.zeros_like(RelYieldsiTOF.values)
+comm.Reduce(RelYieldsiTOF.values,RelYieldsiTOF_all)
+
+Correlation_iTOF_XTCAV_pow_all = np.zeros_like(Correlation_iTOF_XTCAV_pow.values)
+comm.Reduce(Correlation_iTOF_XTCAV_pow.values,Correlation_iTOF_XTCAV_pow_all)
+
+Correlation_iTOF_XTCAV_ratio_all = np.zeros_like(Correlation_iTOF_XTCAV_ratio.values)
+comm.Reduce(Correlation_iTOF_XTCAV_ratio.values,Correlation_iTOF_XTCAV_ratio_all)
+
+# Norms and counter
+evtGood_array = np.array([evtGood])
+evtGood_all = np.zeros_like(evtGood_array)
+comm.Reduce(evtGood_array,evtGood_all)
+
+NormRuns_all = np.zeros_like(NormRuns.values)
+comm.Reduce(NormRuns.values,NormRuns_all)
+
+delayCountHist_all = np.zeros_like(delayCountHist.values)
+comm.Reduce(delayCountHist.values,delayCountHist_all)
+
+feeCountHist_all = np.zeros_like(feeCountHist.values)
+comm.Reduce(feeCountHist.values,feeCountHist_all)
+
+photonCountHist_all = np.zeros_like(photonCountHist.values)
+comm.Reduce(photonCountHist.values,photonCountHist_all)
+
+
+############################### Saving files #############################
 
 if rank==0:
     datName = str(runs).replace(' ','')
-    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/combinedSpectra_%s.npy' % datName,spectraCombined_all)
-    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/XTCAVSpectra_%s.npy' % datName,delayhist2d_all)
-    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/ELossSpectra_%s.npy' % datName,elosshist2d_all)
-    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/GoodEvents_%s.npy' % datName,evtGood_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/combinedSpectra_%s.npy' % datName,spectraCombined_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/XTCAVSpectra_%s.npy' % datName,delayhist2d_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/FeeGasSpectra_%s.npy' % datName,feegashist2d_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/PhotonSpectra_%s.npy' % datName,photonhist2d_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/RatiosXTCAV_%s.npy' % datName,RatiosXTCAV_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/TotalPowXTCAV_%s.npy' % datName,TotalPowXTCAV_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/RatiosiTOF_%s.npy' % datName,RatiosiTOF_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/TotalPowiTOF_%s.npy' % datName,TotalPowiTOF_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/RelYieldsXTCAV_%s.npy' % datName,RelYieldsXTCAV_all) 
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/RelYieldsiTOF_%s.npy' % datName,RelYieldsiTOF_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/CorrelationRatio_%s.npy' % datName,Correlation_iTOF_XTCAV_ratio_all) 
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/CorrelationPow_%s.npy' % datName,Correlation_iTOF_XTCAV_pow_all)
+ 
 
-                #if not 'hithist_sum_all' in locals():
-                #    hithist_sum_all = np.empty_like(hithist.values)
-                #comm.Reduce(hithist.values,hithist_sum_all)
+    # Norms and counter
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/NormRuns_%s.npy' % datName,NormRuns_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/GoodEvents_%s.npy' % datName,evtGood_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/XTCAVCounter_%s.npy' % datName,delayCountHist_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/FEEGasCounter_%s.npy' % datName,feeCountHist_all)
+    np.save('/reg/d/psdm/amo/amon0816/results/mbucher/spectra/PhotonECounter_%s.npy' % datName,photonCountHist_all)
 
-                #if not 'hitxprojhist_sum_all' in locals():
-                #    hitxprojhist_sum_all = np.empty_like(hitxprojhist_sum)
-                #comm.Reduce(hitxprojhist_sum,hitxprojhist_sum_all)
-
-                #if not 'hitjitter_sum_all' in locals():
-                #    hitjitter_sum_all = np.empty_like(hitjitter.values)
-                #comm.Reduce(hitjitter.values,hitjitter_sum_all)
-
-                #if not 'hitxprojjitter_sum_all' in locals():
-                #    hitxprojjitter_sum_all = np.empty_like(hitxprojjitter_sum)
-                #comm.Reduce(hitxprojjitter_sum,hitxprojjitter_sum_all)
-
-                #if not 'minitof_volts_sum_all' in locals():
-                #    minitof_volts_sum_all = np.empty_like(minitof_volts_sum)
-                #comm.Reduce(minitof_volts_sum,minitof_volts_sum_all)
-
-                #if not 'delayhist2d_sum_all' in locals():
-                #    delayhist2d_sum_all = np.empty_like(delayhist2d_sum)
-                #comm.Reduce(delayhist2d_sum,delayhist2d_sum_all)
-
-                #if not 'ion_yield_sum_all' in locals():
-                #    ion_yield_sum_all = np.empty_like(ion_yield)
-                #comm.Reduce(ion_yield,ion_yield_sum_all)
-
-                #if not 'hitxprojseeded_sum_all' in locals():
-                #    hitxprojseeded_sum_all = np.empty_like(hitxprojseeded_sum)
-                #comm.Reduce(hitxprojseeded_sum,hitxprojseeded_sum_all)
-
-
-
-                #if rank==0:
-                    ######################################### SOME ANALYSIS ON RANK 0 #####################################
-                    ###### calculating moments of the hithist.data
-                    #m,s = moments(hitxprojjitter_sum_all) #changed from hitxprojhist_sum_all
-
-                    ###### History on master
-                    #print eventCounter*size, 'total events processed.'
-                    #opal_hit_avg_buff.append(opal_hit_sum_all[0]/(len(opal_hit_buff)*size))
-                    #xproj_int_avg_buff.append(xproj_int_sum_all[0]/(len(xproj_int_buff)*size))
-                    #moments_avg_buff.append(moments_sum_all[0]/(len(moments_buff)*size))
-                    ### moments history
-                    #moments_buff.append(s)
-                    #moments_sum = np.array([sum(moments_buff)])#/len(moments_buff)
-
-                    #####################################################################################################
-                
-                
+    print 'Analysis done. Files written.'

@@ -1,0 +1,66 @@
+aklog: Couldn't determine realm of user:aklog: unknown RPC error (-1765328189)  while getting realm
+Lasing off reference
+	 Experiment: amon0816
+	 Runs: 199
+	 Number of bunches: 1
+	 Valid shots to process: 8000
+	 Dark reference run: []
+0.0 % done, 0 / 80000.1 % done, 5 / 80000.1 % done, 10 / 80000.2 % done, 15 / 80000.2 % done, 20 / 80000.3 % done, 25 / 80000.4 % done, 30 / 80000.4 % done, 35 / 80000.5 % done, 40 / 80000.6 % done, 45 / 80000.6 % done, 50 / 80000.7 % done, 55 / 80000.8 % done, 60 / 80000.8 % done, 65 / 80000.9 % done, 70 / 80000.9 % done, 75 / 80001.0 % done, 80 / 80001.1 % done, 85 / 80001.1 % done, 90 / 80001.2 % done, 95 / 80001.2 % done, 100 / 80001.3 % done, 105 / 80001.4 % done, 110 / 80001.4 % done, 115 / 80001.5 % done, 120 / 80001.6 % done, 125 / 80001.6 % done, 130 / 80001.7 % done, 135 / 80001.8 % done, 140 / 80001.8 % done, 145 / 8000Terminated
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1110.pcdsn>
+Subject: Job 755903: <python XTCAV-GLOC.py> in cluster <slac> Exited
+
+Job <python XTCAV-GLOC.py> was submitted from host <psanaphi107.pcdsn> by user <mbucher> in cluster <slac>.
+Job was executed on host(s) <12*psana1110>, in queue <psanaq>, as user <mbucher> in cluster <slac>.
+                            <12*psana1117>
+                            <12*psana1118>
+                            <12*psana1119>
+                            <12*psana1407>
+                            <12*psana1408>
+                            <12*psana1410>
+                            <12*psana1412>
+                            <12*psana1415>
+                            <12*psana1416>
+                            <12*psana1418>
+                            <12*psana1419>
+                            <12*psana1307>
+                            <12*psana1308>
+                            <12*psana1311>
+                            <12*psana1312>
+                            <12*psana1313>
+                            <12*psana1314>
+                            <12*psana1315>
+                            <12*psana1316>
+                            <12*psana1317>
+                            <12*psana1318>
+                            <12*psana1319>
+                            <12*psana1320>
+                            <12*psana1201>
+                            <12*psana1202>
+                            <12*psana1207>
+                            <12*psana1208>
+                            <12*psana1209>
+                            <12*psana1210>
+                            <12*psana1211>
+                            <12*psana1212>
+                            <12*psana1213>
+                            <12*psana1214>
+                            <12*psana1215>
+                            <12*psana1216>
+                            <12*psana1217>
+                            <12*psana1218>
+                            <12*psana1219>
+                            <12*psana1220>
+                            <12*psana1101>
+                            <12*psana1414>
+                            <8*psana1116>
+</reg/neh/home/mbucher> was used as the home directory.
+</reg/neh/operator/amoopr/2016/amon0816> was used as the working directory.
+Started at Mon Nov  7 20:46:09 2016
+Results reported on Mon Nov  7 20:47:10 2016
+Cannot open your job file: /reg/neh/home/mbucher/.lsbatch/1478580360.755903
+TERM_OWNER: job killed by owner.
+Exited
+The output (if any) is above this job summary.
+

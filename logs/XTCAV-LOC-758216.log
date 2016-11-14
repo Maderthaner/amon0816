@@ -1,0 +1,818 @@
+aklog: Couldn't determine realm of user:aklog: unknown RPC error (-1765328189)  while getting realm
+Lasing off reference
+	 Experiment: amon0816
+	 Runs: 138
+	 Number of bunches: 1
+	 Valid shots to process: 8000
+	 Dark reference run: []
+0.0 % done, 0 / 80000.1 % done, 5 / 80000.1 % done, 10 / 80000.2 % done, 15 / 80000.2 % done, 20 / 80000.3 % done, 25 / 80000.4 % done, 30 / 80000.4 % done, 35 / 80000.5 % done, 40 / 80000.6 % done, 45 / 80000.6 % done, 50 / 80000.7 % done, 55 / 80000.8 % done, 60 / 80000.8 % done, 65 / 80000.9 % done, 70 / 80000.9 % done, 75 / 80001.0 % done, 80 / 80001.1 % done, 85 / 80001.1 % done, 90 / 80001.2 % done, 95 / 80001.2 % done, 100 / 80001.3 % done, 105 / 80001.4 % done, 110 / 80001.4 % done, 115 / 80001.5 % done, 120 / 80001.6 % done, 125 / 80001.6 % done, 130 / 80001.7 % done, 135 / 80001.8 % done, 140 / 80001.8 % done, 145 / 80001.9 % done, 150 / 80001.9 % done, 155 / 80002.0 % done, 160 / 80002.1 % done, 165 / 80002.1 % done, 170 / 80002.2 % done, 175 / 80002.2 % done, 180 / 80002.3 % done, 185 / 80002.4 % done, 190 / 80002.4 % done, 195 / 80002.5 % done, 200 / 80002.6 % done, 205 / 80002.6 % done, 210 / 80002.7 % done, 215 / 80002.8 % done, 220 / 80002.8 % done, 225 / 80002.9 % done, 230 / 80002.9 % done, 235 / 80003.0 % done, 240 / 80003.1 % done, 245 / 80003.1 % done, 250 / 80003.2 % done, 255 / 80003.2 % done, 260 / 80003.3 % done, 265 / 80003.4 % done, 270 / 80003.4 % done, 275 / 80003.5 % done, 280 / 80003.6 % done, 285 / 80003.6 % done, 290 / 80003.7 % done, 295 / 80003.8 % done, 300 / 80003.8 % done, 305 / 80003.9 % done, 310 / 80003.9 % done, 315 / 80004.0 % done, 320 / 80004.1 % done, 325 / 80004.1 % done, 330 / 80004.2 % done, 335 / 80004.2 % done, 340 / 80004.3 % done, 345 / 80004.4 % done, 350 / 80004.4 % done, 355 / 80004.5 % done, 360 / 80004.6 % done, 365 / 80004.6 % done, 370 / 80004.7 % done, 375 / 80004.8 % done, 380 / 80004.8 % done, 385 / 80004.9 % done, 390 / 80004.9 % done, 395 / 80005.0 % done, 400 / 80005.1 % done, 405 / 80005.1 % done, 410 / 80005.2 % done, 415 / 80005.2 % done, 420 / 80005.3 % done, 425 / 80005.4 % done, 430 / 80005.4 % done, 435 / 80005.5 % done, 440 / 80005.6 % done, 445 / 80005.6 % done, 450 / 80005.7 % done, 455 / 80005.8 % done, 460 / 80005.8 % done, 465 / 80005.9 % done, 470 / 80005.9 % done, 475 / 80006.0 % done, 480 / 80006.1 % done, 485 / 80006.1 % done, 490 / 80006.2 % done, 495 / 80006.2 % done, 500 / 80006.3 % done, 505 / 80006.4 % done, 510 / 80006.4 % done, 515 / 80006.5 % done, 520 / 80006.6 % done, 525 / 80006.6 % done, 530 / 80006.7 % done, 535 / 80006.8 % done, 540 / 80006.8 % done, 545 / 80006.9 % done, 550 / 80006.9 % done, 555 / 80007.0 % done, 560 / 80007.1 % done, 565 / 80007.1 % done, 570 / 80007.2 % done, 575 / 80007.2 % done, 580 / 80007.3 % done, 585 / 80007.4 % done, 590 / 80007.4 % done, 595 / 80007.5 % done, 600 / 80007.6 % done, 605 / 80007.6 % done, 610 / 80007.7 % done, 615 / 80007.8 % done, 620 / 80007.8 % done, 625 / 80007.9 % done, 630 / 80007.9 % done, 635 / 80008.0 % done, 640 / 80008.1 % done, 645 / 80008.1 % done, 650 / 80008.2 % done, 655 / 80008.2 % done, 660 / 80008.3 % done, 665 / 80008.4 % done, 670 / 80008.4 % done, 675 / 80008.5 % done, 680 / 80008.6 % done, 685 / 80008.6 % done, 690 / 80008.7 % done, 695 / 80008.8 % done, 700 / 80008.8 % done, 705 / 80008.9 % done, 710 / 80008.9 % done, 715 / 80009.0 % done, 720 / 80009.1 % done, 725 / 80009.1 % done, 730 / 80009.2 % done, 735 / 80009.2 % done, 740 / 80009.3 % done, 745 / 80009.4 % done, 750 / 80009.4 % done, 755 / 80009.5 % done, 760 / 80009.6 % done, 765 / 80009.6 % done, 770 / 80009.7 % done, 775 / 80009.8 % done, 780 / 80009.8 % done, 785 / 80009.9 % done, 790 / 80009.9 % done, 795 / 800010.0 % done, 800 / 800010.1 % done, 805 / 800010.1 % done, 810 / 800010.2 % done, 815 / 800010.2 % done, 820 / 800010.3 % done, 825 / 800010.4 % done, 830 / 800010.4 % done, 835 / 800010.5 % done, 840 / 800010.6 % done, 845 / 800010.6 % done, 850 / 800010.7 % done, 855 / 800010.8 % done, 860 / 800010.8 % done, 865 / 800010.9 % done, 870 / 800010.9 % done, 875 / 800011.0 % done, 880 / 800011.1 % done, 885 / 800011.1 % done, 890 / 800011.2 % done, 895 / 800011.2 % done, 900 / 800011.3 % done, 905 / 800011.4 % done, 910 / 800011.4 % done, 915 / 800011.5 % done, 920 / 800011.6 % done, 925 / 800011.6 % done, 930 / 800011.7 % done, 935 / 800011.8 % done, 940 / 800011.8 % done, 945 / 800011.9 % done, 950 / 800011.9 % done, 955 / 800012.0 % done, 960 / 800012.1 % done, 965 / 800012.1 % done, 970 / 800012.2 % done, 975 / 800012.2 % done, 980 / 800012.3 % done, 985 / 800012.4 % done, 990 / 800012.4 % done, 995 / 800012.5 % done, 1000 / 800012.6 % done, 1005 / 800012.6 % done, 1010 / 800012.7 % done, 1015 / 800012.8 % done, 1020 / 800012.8 % done, 1025 / 800012.9 % done, 1030 / 800012.9 % done, 1035 / 800013.0 % done, 1040 / 800013.1 % done, 1045 / 800013.1 % done, 1050 / 800013.2 % done, 1055 / 800013.2 % done, 1060 / 800013.3 % done, 1065 / 800013.4 % done, 1070 / 800013.4 % done, 1075 / 800013.5 % done, 1080 / 800013.6 % done, 1085 / 800013.6 % done, 1090 / 800013.7 % done, 1095 / 800013.8 % done, 1100 / 800013.8 % done, 1105 / 800013.9 % done, 1110 / 800013.9 % done, 1115 / 800014.0 % done, 1120 / 800014.1 % done, 1125 / 800014.1 % done, 1130 / 800014.2 % done, 1135 / 800014.2 % done, 1140 / 800014.3 % done, 1145 / 800014.4 % done, 1150 / 800014.4 % done, 1155 / 800014.5 % done, 1160 / 800014.6 % done, 1165 / 800014.6 % done, 1170 / 800014.7 % done, 1175 / 800014.8 % done, 1180 / 800014.8 % done, 1185 / 800014.9 % done, 1190 / 800014.9 % done, 1195 / 800015.0 % done, 1200 / 800015.1 % done, 1205 / 800015.1 % done, 1210 / 800015.2 % done, 1215 / 800015.2 % done, 1220 / 800015.3 % done, 1225 / 800015.4 % done, 1230 / 800015.4 % done, 1235 / 800015.5 % done, 1240 / 800015.6 % done, 1245 / 800015.6 % done, 1250 / 800015.7 % done, 1255 / 800015.8 % done, 1260 / 800015.8 % done, 1265 / 800015.9 % done, 1270 / 800015.9 % done, 1275 / 800016.0 % done, 1280 / 800016.1 % done, 1285 / 800016.1 % done, 1290 / 800016.2 % done, 1295 / 800016.2 % done, 1300 / 800016.3 % done, 1305 / 800016.4 % done, 1310 / 800016.4 % done, 1315 / 800016.5 % done, 1320 / 800016.6 % done, 1325 / 800016.6 % done, 1330 / 800016.7 % done, 1335 / 800016.8 % done, 1340 / 800016.8 % done, 1345 / 800016.9 % done, 1350 / 800016.9 % done, 1355 / 800017.0 % done, 1360 / 800017.1 % done, 1365 / 800017.1 % done, 1370 / 800017.2 % done, 1375 / 800017.2 % done, 1380 / 800017.3 % done, 1385 / 800017.4 % done, 1390 / 800017.4 % done, 1395 / 800017.5 % done, 1400 / 800017.6 % done, 1405 / 800017.6 % done, 1410 / 800017.7 % done, 1415 / 800017.8 % done, 1420 / 800017.8 % done, 1425 / 800017.9 % done, 1430 / 800017.9 % done, 1435 / 800018.0 % done, 1440 / 800018.1 % done, 1445 / 800018.1 % done, 1450 / 800018.2 % done, 1455 / 800018.2 % done, 1460 / 800018.3 % done, 1465 / 800018.4 % done, 1470 / 8000XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+18.4 % done, 1475 / 800018.5 % done, 1480 / 800018.6 % done, 1485 / 800018.6 % done, 1490 / 800018.7 % done, 1495 / 800018.8 % done, 1500 / 800018.8 % done, 1505 / 800018.9 % done, 1510 / 800018.9 % done, 1515 / 800019.0 % done, 1520 / 800019.1 % done, 1525 / 800019.1 % done, 1530 / 800019.2 % done, 1535 / 800019.2 % done, 1540 / 800019.3 % done, 1545 / 800019.4 % done, 1550 / 800019.4 % done, 1555 / 800019.5 % done, 1560 / 800019.6 % done, 1565 / 800019.6 % done, 1570 / 800019.7 % done, 1575 / 800019.8 % done, 1580 / 800019.8 % done, 1585 / 800019.9 % done, 1590 / 800019.9 % done, 1595 / 800020.0 % done, 1600 / 800020.1 % done, 1605 / 800020.1 % done, 1610 / 800020.2 % done, 1615 / 800020.2 % done, 1620 / 800020.3 % done, 1625 / 800020.4 % done, 1630 / 800020.4 % done, 1635 / 800020.5 % done, 1640 / 800020.6 % done, 1645 / 800020.6 % done, 1650 / 800020.7 % done, 1655 / 800020.8 % done, 1660 / 800020.8 % done, 1665 / 800020.9 % done, 1670 / 800020.9 % done, 1675 / 800021.0 % done, 1680 / 800021.1 % done, 1685 / 800021.1 % done, 1690 / 800021.2 % done, 1695 / 800021.2 % done, 1700 / 800021.3 % done, 1705 / 800021.4 % done, 1710 / 800021.4 % done, 1715 / 800021.5 % done, 1720 / 800021.6 % done, 1725 / 800021.6 % done, 1730 / 800021.7 % done, 1735 / 800021.8 % done, 1740 / 800021.8 % done, 1745 / 800021.9 % done, 1750 / 800021.9 % done, 1755 / 800022.0 % done, 1760 / 800022.1 % done, 1765 / 800022.1 % done, 1770 / 800022.2 % done, 1775 / 800022.2 % done, 1780 / 800022.3 % done, 1785 / 800022.4 % done, 1790 / 800022.4 % done, 1795 / 800022.5 % done, 1800 / 800022.6 % done, 1805 / 800022.6 % done, 1810 / 800022.7 % done, 1815 / 800022.8 % done, 1820 / 800022.8 % done, 1825 / 800022.9 % done, 1830 / 800022.9 % done, 1835 / 800023.0 % done, 1840 / 800023.1 % done, 1845 / 800023.1 % done, 1850 / 800023.2 % done, 1855 / 800023.2 % done, 1860 / 800023.3 % done, 1865 / 800023.4 % done, 1870 / 800023.4 % done, 1875 / 800023.5 % done, 1880 / 800023.6 % done, 1885 / 800023.6 % done, 1890 / 800023.7 % done, 1895 / 800023.8 % done, 1900 / 800023.8 % done, 1905 / 800023.9 % done, 1910 / 800023.9 % done, 1915 / 800024.0 % done, 1920 / 800024.1 % done, 1925 / 800024.1 % done, 1930 / 800024.2 % done, 1935 / 800024.2 % done, 1940 / 800024.3 % done, 1945 / 800024.4 % done, 1950 / 800024.4 % done, 1955 / 800024.5 % done, 1960 / 800024.6 % done, 1965 / 800024.6 % done, 1970 / 800024.7 % done, 1975 / 800024.8 % done, 1980 / 800024.8 % done, 1985 / 800024.9 % done, 1990 / 800024.9 % done, 1995 / 800025.0 % done, 2000 / 800025.1 % done, 2005 / 800025.1 % done, 2010 / 800025.2 % done, 2015 / 800025.2 % done, 2020 / 800025.3 % done, 2025 / 800025.4 % done, 2030 / 800025.4 % done, 2035 / 800025.5 % done, 2040 / 800025.6 % done, 2045 / 800025.6 % done, 2050 / 800025.7 % done, 2055 / 800025.8 % done, 2060 / 800025.8 % done, 2065 / 800025.9 % done, 2070 / 800025.9 % done, 2075 / 800026.0 % done, 2080 / 800026.1 % done, 2085 / 800026.1 % done, 2090 / 800026.2 % done, 2095 / 800026.2 % done, 2100 / 800026.3 % done, 2105 / 800026.4 % done, 2110 / 800026.4 % done, 2115 / 800026.5 % done, 2120 / 800026.6 % done, 2125 / 800026.6 % done, 2130 / 800026.7 % done, 2135 / 800026.8 % done, 2140 / 800026.8 % done, 2145 / 800026.9 % done, 2150 / 800026.9 % done, 2155 / 800027.0 % done, 2160 / 800027.1 % done, 2165 / 800027.1 % done, 2170 / 800027.2 % done, 2175 / 800027.3 % done, 2180 / 800027.3 % done, 2185 / 800027.4 % done, 2190 / 800027.4 % done, 2195 / 800027.5 % done, 2200 / 800027.6 % done, 2205 / 800027.6 % done, 2210 / 800027.7 % done, 2215 / 800027.8 % done, 2220 / 800027.8 % done, 2225 / 800027.9 % done, 2230 / 800027.9 % done, 2235 / 800028.0 % done, 2240 / 800028.1 % done, 2245 / 800028.1 % done, 2250 / 800028.2 % done, 2255 / 800028.2 % done, 2260 / 800028.3 % done, 2265 / 800028.4 % done, 2270 / 800028.4 % done, 2275 / 800028.5 % done, 2280 / 800028.6 % done, 2285 / 800028.6 % done, 2290 / 800028.7 % done, 2295 / 800028.7 % done, 2300 / 800028.8 % done, 2305 / 800028.9 % done, 2310 / 800028.9 % done, 2315 / 800029.0 % done, 2320 / 800029.1 % done, 2325 / 800029.1 % done, 2330 / 800029.2 % done, 2335 / 800029.2 % done, 2340 / 800029.3 % done, 2345 / 800029.4 % done, 2350 / 800029.4 % done, 2355 / 800029.5 % done, 2360 / 800029.6 % done, 2365 / 800029.6 % done, 2370 / 800029.7 % done, 2375 / 800029.8 % done, 2380 / 800029.8 % done, 2385 / 800029.9 % done, 2390 / 800029.9 % done, 2395 / 800030.0 % done, 2400 / 800030.1 % done, 2405 / 800030.1 % done, 2410 / 800030.2 % done, 2415 / 800030.2 % done, 2420 / 800030.3 % done, 2425 / 800030.4 % done, 2430 / 800030.4 % done, 2435 / 800030.5 % done, 2440 / 800030.6 % done, 2445 / 800030.6 % done, 2450 / 800030.7 % done, 2455 / 800030.8 % done, 2460 / 800030.8 % done, 2465 / 800030.9 % done, 2470 / 800030.9 % done, 2475 / 800031.0 % done, 2480 / 800031.1 % done, 2485 / 800031.1 % done, 2490 / 800031.2 % done, 2495 / 800031.2 % done, 2500 / 800031.3 % done, 2505 / 800031.4 % done, 2510 / 800031.4 % done, 2515 / 800031.5 % done, 2520 / 800031.6 % done, 2525 / 800031.6 % done, 2530 / 800031.7 % done, 2535 / 800031.8 % done, 2540 / 800031.8 % done, 2545 / 800031.9 % done, 2550 / 800031.9 % done, 2555 / 800032.0 % done, 2560 / 800032.1 % done, 2565 / 800032.1 % done, 2570 / 800032.2 % done, 2575 / 800032.2 % done, 2580 / 800032.3 % done, 2585 / 800032.4 % done, 2590 / 800032.4 % done, 2595 / 800032.5 % done, 2600 / 800032.6 % done, 2605 / 800032.6 % done, 2610 / 800032.7 % done, 2615 / 800032.8 % done, 2620 / 800032.8 % done, 2625 / 800032.9 % done, 2630 / 800032.9 % done, 2635 / 800033.0 % done, 2640 / 800033.1 % done, 2645 / 800033.1 % done, 2650 / 800033.2 % done, 2655 / 800033.2 % done, 2660 / 800033.3 % done, 2665 / 800033.4 % done, 2670 / 800033.4 % done, 2675 / 800033.5 % done, 2680 / 800033.6 % done, 2685 / 800033.6 % done, 2690 / 800033.7 % done, 2695 / 800033.8 % done, 2700 / 800033.8 % done, 2705 / 800033.9 % done, 2710 / 800033.9 % done, 2715 / 800034.0 % done, 2720 / 800034.1 % done, 2725 / 800034.1 % done, 2730 / 800034.2 % done, 2735 / 800034.2 % done, 2740 / 800034.3 % done, 2745 / 800034.4 % done, 2750 / 800034.4 % done, 2755 / 800034.5 % done, 2760 / 800034.6 % done, 2765 / 800034.6 % done, 2770 / 800034.7 % done, 2775 / 800034.8 % done, 2780 / 800034.8 % done, 2785 / 800034.9 % done, 2790 / 800034.9 % done, 2795 / 800035.0 % done, 2800 / 800035.1 % done, 2805 / 800035.1 % done, 2810 / 800035.2 % done, 2815 / 800035.2 % done, 2820 / 800035.3 % done, 2825 / 800035.4 % done, 2830 / 800035.4 % done, 2835 / 800035.5 % done, 2840 / 800035.6 % done, 2845 / 800035.6 % done, 2850 / 800035.7 % done, 2855 / 800035.8 % done, 2860 / 800035.8 % done, 2865 / 800035.9 % done, 2870 / 800035.9 % done, 2875 / 800036.0 % done, 2880 / 800036.1 % done, 2885 / 800036.1 % done, 2890 / 800036.2 % done, 2895 / 800036.2 % done, 2900 / 800036.3 % done, 2905 / 800036.4 % done, 2910 / 800036.4 % done, 2915 / 800036.5 % done, 2920 / 800036.6 % done, 2925 / 800036.6 % done, 2930 / 800036.7 % done, 2935 / 800036.8 % done, 2940 / 800036.8 % done, 2945 / 800036.9 % done, 2950 / 800036.9 % done, 2955 / 800037.0 % done, 2960 / 800037.1 % done, 2965 / 800037.1 % done, 2970 / 800037.2 % done, 2975 / 800037.2 % done, 2980 / 800037.3 % done, 2985 / 800037.4 % done, 2990 / 800037.4 % done, 2995 / 800037.5 % done, 3000 / 800037.6 % done, 3005 / 800037.6 % done, 3010 / 800037.7 % done, 3015 / 800037.8 % done, 3020 / 800037.8 % done, 3025 / 800037.9 % done, 3030 / 800037.9 % done, 3035 / 800038.0 % done, 3040 / 800038.1 % done, 3045 / 800038.1 % done, 3050 / 800038.2 % done, 3055 / 800038.2 % done, 3060 / 800038.3 % done, 3065 / 800038.4 % done, 3070 / 800038.4 % done, 3075 / 800038.5 % done, 3080 / 800038.6 % done, 3085 / 800038.6 % done, 3090 / 800038.7 % done, 3095 / 800038.8 % done, 3100 / 800038.8 % done, 3105 / 800038.9 % done, 3110 / 800038.9 % done, 3115 / 800039.0 % done, 3120 / 800039.1 % done, 3125 / 800039.1 % done, 3130 / 800039.2 % done, 3135 / 800039.2 % done, 3140 / 800039.3 % done, 3145 / 800039.4 % done, 3150 / 800039.4 % done, 3155 / 800039.5 % done, 3160 / 800039.6 % done, 3165 / 800039.6 % done, 3170 / 800039.7 % done, 3175 / 800039.8 % done, 3180 / 800039.8 % done, 3185 / 800039.9 % done, 3190 / 800039.9 % done, 3195 / 800040.0 % done, 3200 / 800040.1 % done, 3205 / 800040.1 % done, 3210 / 800040.2 % done, 3215 / 800040.2 % done, 3220 / 800040.3 % done, 3225 / 800040.4 % done, 3230 / 800040.4 % done, 3235 / 800040.5 % done, 3240 / 800040.6 % done, 3245 / 800040.6 % done, 3250 / 800040.7 % done, 3255 / 800040.8 % done, 3260 / 800040.8 % done, 3265 / 800040.9 % done, 3270 / 800040.9 % done, 3275 / 800041.0 % done, 3280 / 800041.1 % done, 3285 / 800041.1 % done, 3290 / 800041.2 % done, 3295 / 800041.2 % done, 3300 / 800041.3 % done, 3305 / 800041.4 % done, 3310 / 800041.4 % done, 3315 / 800041.5 % done, 3320 / 800041.6 % done, 3325 / 800041.6 % done, 3330 / 800041.7 % done, 3335 / 800041.8 % done, 3340 / 800041.8 % done, 3345 / 800041.9 % done, 3350 / 800041.9 % done, 3355 / 800042.0 % done, 3360 / 800042.1 % done, 3365 / 800042.1 % done, 3370 / 800042.2 % done, 3375 / 800042.2 % done, 3380 / 800042.3 % done, 3385 / 800042.4 % done, 3390 / 800042.4 % done, 3395 / 800042.5 % done, 3400 / 800042.6 % done, 3405 / 800042.6 % done, 3410 / 800042.7 % done, 3415 / 800042.8 % done, 3420 / 800042.8 % done, 3425 / 800042.9 % done, 3430 / 800042.9 % done, 3435 / 800043.0 % done, 3440 / 800043.1 % done, 3445 / 800043.1 % done, 3450 / 800043.2 % done, 3455 / 800043.2 % done, 3460 / 800043.3 % done, 3465 / 800043.4 % done, 3470 / 800043.4 % done, 3475 / 8000XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+43.5 % done, 3480 / 800043.6 % done, 3485 / 800043.6 % done, 3490 / 800043.7 % done, 3495 / 800043.8 % done, 3500 / 800043.8 % done, 3505 / 800043.9 % done, 3510 / 800043.9 % done, 3515 / 800044.0 % done, 3520 / 800044.1 % done, 3525 / 800044.1 % done, 3530 / 800044.2 % done, 3535 / 800044.2 % done, 3540 / 800044.3 % done, 3545 / 800044.4 % done, 3550 / 800044.4 % done, 3555 / 800044.5 % done, 3560 / 800044.6 % done, 3565 / 800044.6 % done, 3570 / 800044.7 % done, 3575 / 800044.8 % done, 3580 / 800044.8 % done, 3585 / 800044.9 % done, 3590 / 800044.9 % done, 3595 / 800045.0 % done, 3600 / 800045.1 % done, 3605 / 800045.1 % done, 3610 / 800045.2 % done, 3615 / 800045.2 % done, 3620 / 800045.3 % done, 3625 / 800045.4 % done, 3630 / 800045.4 % done, 3635 / 800045.5 % done, 3640 / 800045.6 % done, 3645 / 800045.6 % done, 3650 / 800045.7 % done, 3655 / 800045.8 % done, 3660 / 800045.8 % done, 3665 / 800045.9 % done, 3670 / 800045.9 % done, 3675 / 800046.0 % done, 3680 / 800046.1 % done, 3685 / 800046.1 % done, 3690 / 800046.2 % done, 3695 / 800046.2 % done, 3700 / 800046.3 % done, 3705 / 800046.4 % done, 3710 / 800046.4 % done, 3715 / 800046.5 % done, 3720 / 800046.6 % done, 3725 / 800046.6 % done, 3730 / 800046.7 % done, 3735 / 800046.8 % done, 3740 / 800046.8 % done, 3745 / 800046.9 % done, 3750 / 800046.9 % done, 3755 / 800047.0 % done, 3760 / 800047.1 % done, 3765 / 800047.1 % done, 3770 / 800047.2 % done, 3775 / 800047.2 % done, 3780 / 800047.3 % done, 3785 / 800047.4 % done, 3790 / 800047.4 % done, 3795 / 800047.5 % done, 3800 / 800047.6 % done, 3805 / 800047.6 % done, 3810 / 800047.7 % done, 3815 / 800047.8 % done, 3820 / 800047.8 % done, 3825 / 800047.9 % done, 3830 / 800047.9 % done, 3835 / 800048.0 % done, 3840 / 800048.1 % done, 3845 / 800048.1 % done, 3850 / 800048.2 % done, 3855 / 800048.2 % done, 3860 / 800048.3 % done, 3865 / 800048.4 % done, 3870 / 800048.4 % done, 3875 / 800048.5 % done, 3880 / 800048.6 % done, 3885 / 800048.6 % done, 3890 / 800048.7 % done, 3895 / 800048.8 % done, 3900 / 800048.8 % done, 3905 / 800048.9 % done, 3910 / 800048.9 % done, 3915 / 800049.0 % done, 3920 / 800049.1 % done, 3925 / 800049.1 % done, 3930 / 800049.2 % done, 3935 / 800049.2 % done, 3940 / 800049.3 % done, 3945 / 800049.4 % done, 3950 / 800049.4 % done, 3955 / 800049.5 % done, 3960 / 800049.6 % done, 3965 / 800049.6 % done, 3970 / 800049.7 % done, 3975 / 800049.8 % done, 3980 / 800049.8 % done, 3985 / 800049.9 % done, 3990 / 800049.9 % done, 3995 / 800050.0 % done, 4000 / 800050.1 % done, 4005 / 800050.1 % done, 4010 / 800050.2 % done, 4015 / 800050.2 % done, 4020 / 800050.3 % done, 4025 / 800050.4 % done, 4030 / 800050.4 % done, 4035 / 800050.5 % done, 4040 / 800050.6 % done, 4045 / 800050.6 % done, 4050 / 800050.7 % done, 4055 / 800050.7 % done, 4060 / 800050.8 % done, 4065 / 800050.9 % done, 4070 / 800050.9 % done, 4075 / 800051.0 % done, 4080 / 800051.1 % done, 4085 / 800051.1 % done, 4090 / 800051.2 % done, 4095 / 800051.2 % done, 4100 / 800051.3 % done, 4105 / 800051.4 % done, 4110 / 800051.4 % done, 4115 / 800051.5 % done, 4120 / 800051.6 % done, 4125 / 800051.6 % done, 4130 / 800051.7 % done, 4135 / 800051.7 % done, 4140 / 800051.8 % done, 4145 / 800051.9 % done, 4150 / 800051.9 % done, 4155 / 800052.0 % done, 4160 / 800052.1 % done, 4165 / 800052.1 % done, 4170 / 800052.2 % done, 4175 / 800052.2 % done, 4180 / 800052.3 % done, 4185 / 800052.4 % done, 4190 / 800052.4 % done, 4195 / 800052.5 % done, 4200 / 800052.6 % done, 4205 / 800052.6 % done, 4210 / 800052.7 % done, 4215 / 800052.8 % done, 4220 / 800052.8 % done, 4225 / 800052.9 % done, 4230 / 800052.9 % done, 4235 / 800053.0 % done, 4240 / 800053.1 % done, 4245 / 800053.1 % done, 4250 / 800053.2 % done, 4255 / 800053.2 % done, 4260 / 800053.3 % done, 4265 / 800053.4 % done, 4270 / 800053.4 % done, 4275 / 800053.5 % done, 4280 / 800053.6 % done, 4285 / 800053.6 % done, 4290 / 800053.7 % done, 4295 / 800053.8 % done, 4300 / 800053.8 % done, 4305 / 800053.9 % done, 4310 / 800053.9 % done, 4315 / 800054.0 % done, 4320 / 800054.1 % done, 4325 / 800054.1 % done, 4330 / 800054.2 % done, 4335 / 800054.2 % done, 4340 / 800054.3 % done, 4345 / 800054.4 % done, 4350 / 800054.4 % done, 4355 / 800054.5 % done, 4360 / 800054.6 % done, 4365 / 800054.6 % done, 4370 / 800054.7 % done, 4375 / 800054.8 % done, 4380 / 800054.8 % done, 4385 / 800054.9 % done, 4390 / 800054.9 % done, 4395 / 800055.0 % done, 4400 / 800055.1 % done, 4405 / 800055.1 % done, 4410 / 800055.2 % done, 4415 / 800055.2 % done, 4420 / 800055.3 % done, 4425 / 800055.4 % done, 4430 / 800055.4 % done, 4435 / 800055.5 % done, 4440 / 800055.6 % done, 4445 / 800055.6 % done, 4450 / 800055.7 % done, 4455 / 800055.8 % done, 4460 / 800055.8 % done, 4465 / 800055.9 % done, 4470 / 800055.9 % done, 4475 / 800056.0 % done, 4480 / 800056.1 % done, 4485 / 800056.1 % done, 4490 / 800056.2 % done, 4495 / 800056.2 % done, 4500 / 800056.3 % done, 4505 / 800056.4 % done, 4510 / 800056.4 % done, 4515 / 800056.5 % done, 4520 / 800056.6 % done, 4525 / 800056.6 % done, 4530 / 800056.7 % done, 4535 / 800056.8 % done, 4540 / 800056.8 % done, 4545 / 800056.9 % done, 4550 / 800056.9 % done, 4555 / 800057.0 % done, 4560 / 800057.1 % done, 4565 / 800057.1 % done, 4570 / 800057.2 % done, 4575 / 800057.2 % done, 4580 / 800057.3 % done, 4585 / 800057.4 % done, 4590 / 800057.4 % done, 4595 / 800057.5 % done, 4600 / 800057.6 % done, 4605 / 800057.6 % done, 4610 / 800057.7 % done, 4615 / 800057.8 % done, 4620 / 800057.8 % done, 4625 / 800057.9 % done, 4630 / 800057.9 % done, 4635 / 800058.0 % done, 4640 / 800058.1 % done, 4645 / 800058.1 % done, 4650 / 800058.2 % done, 4655 / 800058.2 % done, 4660 / 800058.3 % done, 4665 / 800058.4 % done, 4670 / 800058.4 % done, 4675 / 800058.5 % done, 4680 / 800058.6 % done, 4685 / 800058.6 % done, 4690 / 800058.7 % done, 4695 / 800058.8 % done, 4700 / 800058.8 % done, 4705 / 800058.9 % done, 4710 / 800058.9 % done, 4715 / 800059.0 % done, 4720 / 800059.1 % done, 4725 / 800059.1 % done, 4730 / 800059.2 % done, 4735 / 800059.2 % done, 4740 / 800059.3 % done, 4745 / 800059.4 % done, 4750 / 800059.4 % done, 4755 / 800059.5 % done, 4760 / 800059.6 % done, 4765 / 800059.6 % done, 4770 / 800059.7 % done, 4775 / 800059.8 % done, 4780 / 800059.8 % done, 4785 / 800059.9 % done, 4790 / 800059.9 % done, 4795 / 800060.0 % done, 4800 / 800060.1 % done, 4805 / 800060.1 % done, 4810 / 800060.2 % done, 4815 / 800060.2 % done, 4820 / 800060.3 % done, 4825 / 800060.4 % done, 4830 / 800060.4 % done, 4835 / 800060.5 % done, 4840 / 800060.6 % done, 4845 / 800060.6 % done, 4850 / 800060.7 % done, 4855 / 800060.8 % done, 4860 / 800060.8 % done, 4865 / 800060.9 % done, 4870 / 800060.9 % done, 4875 / 800061.0 % done, 4880 / 800061.1 % done, 4885 / 800061.1 % done, 4890 / 800061.2 % done, 4895 / 800061.3 % done, 4900 / 800061.3 % done, 4905 / 800061.4 % done, 4910 / 800061.4 % done, 4915 / 800061.5 % done, 4920 / 800061.6 % done, 4925 / 800061.6 % done, 4930 / 800061.7 % done, 4935 / 800061.8 % done, 4940 / 800061.8 % done, 4945 / 800061.9 % done, 4950 / 800061.9 % done, 4955 / 800062.0 % done, 4960 / 800062.1 % done, 4965 / 800062.1 % done, 4970 / 800062.2 % done, 4975 / 800062.3 % done, 4980 / 800062.3 % done, 4985 / 800062.4 % done, 4990 / 800062.4 % done, 4995 / 800062.5 % done, 5000 / 800062.6 % done, 5005 / 800062.6 % done, 5010 / 800062.7 % done, 5015 / 800062.7 % done, 5020 / 800062.8 % done, 5025 / 800062.9 % done, 5030 / 800062.9 % done, 5035 / 800063.0 % done, 5040 / 800063.1 % done, 5045 / 800063.1 % done, 5050 / 800063.2 % done, 5055 / 800063.2 % done, 5060 / 800063.3 % done, 5065 / 800063.4 % done, 5070 / 800063.4 % done, 5075 / 800063.5 % done, 5080 / 800063.6 % done, 5085 / 8000XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+63.6 % done, 5090 / 800063.7 % done, 5095 / 800063.7 % done, 5100 / 800063.8 % done, 5105 / 800063.9 % done, 5110 / 800063.9 % done, 5115 / 800064.0 % done, 5120 / 800064.1 % done, 5125 / 800064.1 % done, 5130 / 800064.2 % done, 5135 / 800064.2 % done, 5140 / 800064.3 % done, 5145 / 800064.4 % done, 5150 / 800064.4 % done, 5155 / 800064.5 % done, 5160 / 800064.6 % done, 5165 / 800064.6 % done, 5170 / 800064.7 % done, 5175 / 800064.8 % done, 5180 / 800064.8 % done, 5185 / 800064.9 % done, 5190 / 800064.9 % done, 5195 / 800065.0 % done, 5200 / 800065.1 % done, 5205 / 800065.1 % done, 5210 / 800065.2 % done, 5215 / 800065.2 % done, 5220 / 800065.3 % done, 5225 / 800065.4 % done, 5230 / 800065.4 % done, 5235 / 800065.5 % done, 5240 / 800065.6 % done, 5245 / 800065.6 % done, 5250 / 800065.7 % done, 5255 / 800065.8 % done, 5260 / 800065.8 % done, 5265 / 800065.9 % done, 5270 / 800065.9 % done, 5275 / 800066.0 % done, 5280 / 800066.1 % done, 5285 / 800066.1 % done, 5290 / 800066.2 % done, 5295 / 800066.2 % done, 5300 / 800066.3 % done, 5305 / 800066.4 % done, 5310 / 800066.4 % done, 5315 / 800066.5 % done, 5320 / 800066.6 % done, 5325 / 800066.6 % done, 5330 / 800066.7 % done, 5335 / 800066.8 % done, 5340 / 800066.8 % done, 5345 / 800066.9 % done, 5350 / 800066.9 % done, 5355 / 800067.0 % done, 5360 / 800067.1 % done, 5365 / 800067.1 % done, 5370 / 800067.2 % done, 5375 / 800067.2 % done, 5380 / 800067.3 % done, 5385 / 800067.4 % done, 5390 / 800067.4 % done, 5395 / 800067.5 % done, 5400 / 800067.6 % done, 5405 / 800067.6 % done, 5410 / 800067.7 % done, 5415 / 800067.8 % done, 5420 / 800067.8 % done, 5425 / 800067.9 % done, 5430 / 800067.9 % done, 5435 / 800068.0 % done, 5440 / 800068.1 % done, 5445 / 800068.1 % done, 5450 / 800068.2 % done, 5455 / 800068.2 % done, 5460 / 800068.3 % done, 5465 / 800068.4 % done, 5470 / 800068.4 % done, 5475 / 800068.5 % done, 5480 / 800068.6 % done, 5485 / 800068.6 % done, 5490 / 800068.7 % done, 5495 / 800068.8 % done, 5500 / 800068.8 % done, 5505 / 800068.9 % done, 5510 / 800068.9 % done, 5515 / 800069.0 % done, 5520 / 800069.1 % done, 5525 / 800069.1 % done, 5530 / 800069.2 % done, 5535 / 800069.2 % done, 5540 / 800069.3 % done, 5545 / 800069.4 % done, 5550 / 800069.4 % done, 5555 / 800069.5 % done, 5560 / 800069.6 % done, 5565 / 800069.6 % done, 5570 / 800069.7 % done, 5575 / 800069.8 % done, 5580 / 800069.8 % done, 5585 / 800069.9 % done, 5590 / 800069.9 % done, 5595 / 800070.0 % done, 5600 / 800070.1 % done, 5605 / 800070.1 % done, 5610 / 800070.2 % done, 5615 / 800070.2 % done, 5620 / 800070.3 % done, 5625 / 800070.4 % done, 5630 / 800070.4 % done, 5635 / 800070.5 % done, 5640 / 800070.6 % done, 5645 / 800070.6 % done, 5650 / 800070.7 % done, 5655 / 800070.8 % done, 5660 / 800070.8 % done, 5665 / 800070.9 % done, 5670 / 800070.9 % done, 5675 / 800071.0 % done, 5680 / 800071.1 % done, 5685 / 800071.1 % done, 5690 / 800071.2 % done, 5695 / 800071.2 % done, 5700 / 800071.3 % done, 5705 / 800071.4 % done, 5710 / 800071.4 % done, 5715 / 800071.5 % done, 5720 / 800071.6 % done, 5725 / 800071.6 % done, 5730 / 800071.7 % done, 5735 / 800071.8 % done, 5740 / 800071.8 % done, 5745 / 800071.9 % done, 5750 / 800071.9 % done, 5755 / 800072.0 % done, 5760 / 800072.1 % done, 5765 / 800072.1 % done, 5770 / 800072.2 % done, 5775 / 800072.2 % done, 5780 / 800072.3 % done, 5785 / 800072.4 % done, 5790 / 800072.4 % done, 5795 / 800072.5 % done, 5800 / 800072.6 % done, 5805 / 800072.6 % done, 5810 / 800072.7 % done, 5815 / 800072.8 % done, 5820 / 800072.8 % done, 5825 / 800072.9 % done, 5830 / 800072.9 % done, 5835 / 800073.0 % done, 5840 / 800073.1 % done, 5845 / 800073.1 % done, 5850 / 800073.2 % done, 5855 / 800073.2 % done, 5860 / 800073.3 % done, 5865 / 800073.4 % done, 5870 / 800073.4 % done, 5875 / 800073.5 % done, 5880 / 800073.6 % done, 5885 / 800073.6 % done, 5890 / 800073.7 % done, 5895 / 800073.8 % done, 5900 / 800073.8 % done, 5905 / 800073.9 % done, 5910 / 800073.9 % done, 5915 / 800074.0 % done, 5920 / 800074.1 % done, 5925 / 800074.1 % done, 5930 / 800074.2 % done, 5935 / 800074.2 % done, 5940 / 800074.3 % done, 5945 / 800074.4 % done, 5950 / 800074.4 % done, 5955 / 800074.5 % done, 5960 / 800074.6 % done, 5965 / 800074.6 % done, 5970 / 800074.7 % done, 5975 / 800074.8 % done, 5980 / 800074.8 % done, 5985 / 800074.9 % done, 5990 / 800074.9 % done, 5995 / 800075.0 % done, 6000 / 800075.1 % done, 6005 / 800075.1 % done, 6010 / 800075.2 % done, 6015 / 800075.2 % done, 6020 / 800075.3 % done, 6025 / 800075.4 % done, 6030 / 800075.4 % done, 6035 / 800075.5 % done, 6040 / 800075.6 % done, 6045 / 800075.6 % done, 6050 / 800075.7 % done, 6055 / 800075.8 % done, 6060 / 800075.8 % done, 6065 / 800075.9 % done, 6070 / 800075.9 % done, 6075 / 800076.0 % done, 6080 / 800076.1 % done, 6085 / 800076.1 % done, 6090 / 800076.2 % done, 6095 / 800076.2 % done, 6100 / 800076.3 % done, 6105 / 800076.4 % done, 6110 / 800076.4 % done, 6115 / 800076.5 % done, 6120 / 800076.6 % done, 6125 / 800076.6 % done, 6130 / 800076.7 % done, 6135 / 800076.8 % done, 6140 / 800076.8 % done, 6145 / 800076.9 % done, 6150 / 800076.9 % done, 6155 / 800077.0 % done, 6160 / 800077.1 % done, 6165 / 800077.1 % done, 6170 / 800077.2 % done, 6175 / 800077.2 % done, 6180 / 800077.3 % done, 6185 / 800077.4 % done, 6190 / 800077.4 % done, 6195 / 800077.5 % done, 6200 / 800077.6 % done, 6205 / 800077.6 % done, 6210 / 800077.7 % done, 6215 / 800077.8 % done, 6220 / 800077.8 % done, 6225 / 800077.9 % done, 6230 / 800077.9 % done, 6235 / 800078.0 % done, 6240 / 800078.1 % done, 6245 / 800078.1 % done, 6250 / 800078.2 % done, 6255 / 800078.2 % done, 6260 / 800078.3 % done, 6265 / 800078.4 % done, 6270 / 800078.4 % done, 6275 / 800078.5 % done, 6280 / 800078.6 % done, 6285 / 800078.6 % done, 6290 / 800078.7 % done, 6295 / 800078.8 % done, 6300 / 800078.8 % done, 6305 / 800078.9 % done, 6310 / 800078.9 % done, 6315 / 800079.0 % done, 6320 / 800079.1 % done, 6325 / 800079.1 % done, 6330 / 800079.2 % done, 6335 / 800079.2 % done, 6340 / 800079.3 % done, 6345 / 800079.4 % done, 6350 / 800079.4 % done, 6355 / 800079.5 % done, 6360 / 800079.6 % done, 6365 / 800079.6 % done, 6370 / 800079.7 % done, 6375 / 800079.8 % done, 6380 / 800079.8 % done, 6385 / 800079.9 % done, 6390 / 800079.9 % done, 6395 / 800080.0 % done, 6400 / 800080.1 % done, 6405 / 800080.1 % done, 6410 / 800080.2 % done, 6415 / 800080.2 % done, 6420 / 800080.3 % done, 6425 / 8000XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+80.4 % done, 6430 / 800080.4 % done, 6435 / 800080.5 % done, 6440 / 800080.6 % done, 6445 / 800080.6 % done, 6450 / 800080.7 % done, 6455 / 800080.8 % done, 6460 / 800080.8 % done, 6465 / 800080.9 % done, 6470 / 800080.9 % done, 6475 / 800081.0 % done, 6480 / 800081.1 % done, 6485 / 800081.1 % done, 6490 / 800081.2 % done, 6495 / 800081.2 % done, 6500 / 800081.3 % done, 6505 / 800081.4 % done, 6510 / 800081.4 % done, 6515 / 800081.5 % done, 6520 / 800081.6 % done, 6525 / 800081.6 % done, 6530 / 800081.7 % done, 6535 / 800081.8 % done, 6540 / 800081.8 % done, 6545 / 800081.9 % done, 6550 / 800081.9 % done, 6555 / 800082.0 % done, 6560 / 800082.1 % done, 6565 / 800082.1 % done, 6570 / 800082.2 % done, 6575 / 800082.2 % done, 6580 / 800082.3 % done, 6585 / 800082.4 % done, 6590 / 800082.4 % done, 6595 / 800082.5 % done, 6600 / 800082.6 % done, 6605 / 800082.6 % done, 6610 / 800082.7 % done, 6615 / 800082.8 % done, 6620 / 800082.8 % done, 6625 / 800082.9 % done, 6630 / 800082.9 % done, 6635 / 800083.0 % done, 6640 / 800083.1 % done, 6645 / 800083.1 % done, 6650 / 800083.2 % done, 6655 / 800083.2 % done, 6660 / 800083.3 % done, 6665 / 800083.4 % done, 6670 / 800083.4 % done, 6675 / 800083.5 % done, 6680 / 800083.6 % done, 6685 / 800083.6 % done, 6690 / 800083.7 % done, 6695 / 800083.8 % done, 6700 / 800083.8 % done, 6705 / 800083.9 % done, 6710 / 800083.9 % done, 6715 / 800084.0 % done, 6720 / 800084.1 % done, 6725 / 800084.1 % done, 6730 / 800084.2 % done, 6735 / 800084.2 % done, 6740 / 800084.3 % done, 6745 / 800084.4 % done, 6750 / 800084.4 % done, 6755 / 800084.5 % done, 6760 / 800084.6 % done, 6765 / 800084.6 % done, 6770 / 800084.7 % done, 6775 / 800084.8 % done, 6780 / 800084.8 % done, 6785 / 800084.9 % done, 6790 / 800084.9 % done, 6795 / 800085.0 % done, 6800 / 800085.1 % done, 6805 / 800085.1 % done, 6810 / 800085.2 % done, 6815 / 800085.2 % done, 6820 / 800085.3 % done, 6825 / 800085.4 % done, 6830 / 800085.4 % done, 6835 / 800085.5 % done, 6840 / 800085.6 % done, 6845 / 800085.6 % done, 6850 / 800085.7 % done, 6855 / 800085.8 % done, 6860 / 800085.8 % done, 6865 / 800085.9 % done, 6870 / 800085.9 % done, 6875 / 800086.0 % done, 6880 / 800086.1 % done, 6885 / 800086.1 % done, 6890 / 800086.2 % done, 6895 / 800086.2 % done, 6900 / 800086.3 % done, 6905 / 800086.4 % done, 6910 / 800086.4 % done, 6915 / 800086.5 % done, 6920 / 800086.6 % done, 6925 / 800086.6 % done, 6930 / 800086.7 % done, 6935 / 800086.8 % done, 6940 / 800086.8 % done, 6945 / 800086.9 % done, 6950 / 800086.9 % done, 6955 / 800087.0 % done, 6960 / 800087.1 % done, 6965 / 800087.1 % done, 6970 / 800087.2 % done, 6975 / 800087.2 % done, 6980 / 800087.3 % done, 6985 / 800087.4 % done, 6990 / 800087.4 % done, 6995 / 800087.5 % done, 7000 / 800087.6 % done, 7005 / 800087.6 % done, 7010 / 800087.7 % done, 7015 / 800087.8 % done, 7020 / 800087.8 % done, 7025 / 800087.9 % done, 7030 / 800087.9 % done, 7035 / 800088.0 % done, 7040 / 800088.1 % done, 7045 / 800088.1 % done, 7050 / 800088.2 % done, 7055 / 800088.2 % done, 7060 / 800088.3 % done, 7065 / 800088.4 % done, 7070 / 800088.4 % done, 7075 / 800088.5 % done, 7080 / 800088.6 % done, 7085 / 800088.6 % done, 7090 / 800088.7 % done, 7095 / 800088.8 % done, 7100 / 800088.8 % done, 7105 / 800088.9 % done, 7110 / 800088.9 % done, 7115 / 800089.0 % done, 7120 / 800089.1 % done, 7125 / 800089.1 % done, 7130 / 800089.2 % done, 7135 / 800089.2 % done, 7140 / 800089.3 % done, 7145 / 800089.4 % done, 7150 / 800089.4 % done, 7155 / 800089.5 % done, 7160 / 800089.6 % done, 7165 / 800089.6 % done, 7170 / 800089.7 % done, 7175 / 800089.8 % done, 7180 / 800089.8 % done, 7185 / 800089.9 % done, 7190 / 800089.9 % done, 7195 / 800090.0 % done, 7200 / 800090.1 % done, 7205 / 800090.1 % done, 7210 / 800090.2 % done, 7215 / 800090.2 % done, 7220 / 800090.3 % done, 7225 / 800090.4 % done, 7230 / 800090.4 % done, 7235 / 800090.5 % done, 7240 / 800090.6 % done, 7245 / 800090.6 % done, 7250 / 800090.7 % done, 7255 / 800090.8 % done, 7260 / 800090.8 % done, 7265 / 800090.9 % done, 7270 / 800090.9 % done, 7275 / 800091.0 % done, 7280 / 800091.1 % done, 7285 / 800091.1 % done, 7290 / 800091.2 % done, 7295 / 800091.2 % done, 7300 / 800091.3 % done, 7305 / 800091.4 % done, 7310 / 800091.4 % done, 7315 / 800091.5 % done, 7320 / 800091.6 % done, 7325 / 800091.6 % done, 7330 / 800091.7 % done, 7335 / 800091.8 % done, 7340 / 800091.8 % done, 7345 / 800091.9 % done, 7350 / 800091.9 % done, 7355 / 800092.0 % done, 7360 / 800092.1 % done, 7365 / 800092.1 % done, 7370 / 800092.2 % done, 7375 / 800092.2 % done, 7380 / 800092.3 % done, 7385 / 800092.4 % done, 7390 / 800092.4 % done, 7395 / 800092.5 % done, 7400 / 800092.6 % done, 7405 / 800092.6 % done, 7410 / 800092.7 % done, 7415 / 800092.8 % done, 7420 / 800092.8 % done, 7425 / 800092.9 % done, 7430 / 800092.9 % done, 7435 / 800093.0 % done, 7440 / 800093.1 % done, 7445 / 800093.1 % done, 7450 / 800093.2 % done, 7455 / 800093.2 % done, 7460 / 800093.3 % done, 7465 / 8000XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+XTCAV:0: UserWarning: Image Completely Empty
+
+------------------------------------------------------------
+Sender: LSF System <lsf@psana1302.pcdsn>
+Subject: Job 758216: <python XTCAV-GLOC-138.py> in cluster <slac> Done
+
+Job <python XTCAV-GLOC-138.py> was submitted from host <psanaphi107.pcdsn> by user <mbucher> in cluster <slac>.
+Job was executed on host(s) <12*psana1302>, in queue <psanaq>, as user <mbucher> in cluster <slac>.
+                            <12*psana1102>
+                            <12*psana1103>
+                            <12*psana1104>
+                            <12*psana1105>
+                            <12*psana1106>
+                            <12*psana1107>
+                            <12*psana1108>
+                            <12*psana1111>
+                            <12*psana1112>
+                            <12*psana1113>
+                            <12*psana1114>
+                            <12*psana1115>
+                            <12*psana1120>
+                            <12*psana1402>
+                            <12*psana1403>
+                            <12*psana1404>
+                            <12*psana1406>
+                            <12*psana1409>
+                            <12*psana1417>
+                            <12*psana1420>
+                            <4*psana1301>
+</reg/neh/home/mbucher> was used as the home directory.
+</reg/neh/operator/amoopr/2016/amon0816> was used as the working directory.
+Started at Mon Nov  7 20:54:21 2016
+Results reported on Mon Nov  7 21:40:16 2016
+Cannot open your job file: /reg/neh/home/mbucher/.lsbatch/1478580844.758216
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2167.32 sec.
+    Max Memory :                                 3122 MB
+    Average Memory :                             2586.03 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1 MB
+    Max Processes :                              3
+    Max Threads :                                7
+    Run time :                                   2753 sec.
+    Turnaround time :                            2772 sec.
+
+The output (if any) is above this job summary.
+
